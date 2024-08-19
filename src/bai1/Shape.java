@@ -1,7 +1,7 @@
 package bai1;
 
-//public abstract class Shape
-public class Shape
+public abstract class Shape
+//public class Shape
 {
 	private String color = "green";
 	private boolean filled = true;
@@ -36,8 +36,8 @@ public class Shape
 		this.filled = filled;
 	}
 	
-//	public abstract double getArea();
-//	public abstract double getPerimeter();
+	public abstract double getArea();
+	public abstract double getPerimeter();
 	
 	public String toString()
 	{

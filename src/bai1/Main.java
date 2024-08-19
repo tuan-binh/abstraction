@@ -14,47 +14,30 @@ public class Main
 //			if (shapes[i] instanceof Circle || shapes[i] instanceof Rectangle || shapes[i] instanceof Square)
 //			{
 			if(shapes[i] instanceof Circle){
-				System.out.println("Trước khi thay đổi = " + ((Circle) shapes[i]).getArea());
-				double randomNumber = Math.floor(Math.random() * 100);
-				
-				System.out.println("Phần trăm thay đổi = " + randomNumber);
-				// kiểm tra hình thứ i trien khai cua Resizeable
-				if (shapes[i] instanceof Resizeable)
-				{
-					((Resizeable) shapes[i]).resize(randomNumber);
-				}
-				
-				System.out.println("Sau khi thay đổi = " + ((Circle) shapes[i]).getArea());
+				showAreaBeforeAndAfter(shapes, i);
 			}
 			if(shapes[i] instanceof Rectangle){
-				System.out.println("Trước khi thay đổi = " + ((Circle) shapes[i]).getArea());
-				double randomNumber = Math.floor(Math.random() * 100);
-				
-				System.out.println("Phần trăm thay đổi = " + randomNumber);
-				// kiểm tra hình thứ i trien khai cua Resizeable
-				if (shapes[i] instanceof Resizeable)
-				{
-					((Resizeable) shapes[i]).resize(randomNumber);
-				}
-				
-				System.out.println("Sau khi thay đổi = " + ((Circle) shapes[i]).getArea());
+				showAreaBeforeAndAfter(shapes, i);
 			}
 			if(shapes[i] instanceof Square){
-				System.out.println("Trước khi thay đổi = " + ((Circle) shapes[i]).getArea());
-				double randomNumber = Math.floor(Math.random() * 100);
-				
-				System.out.println("Phần trăm thay đổi = " + randomNumber);
-				// kiểm tra hình thứ i trien khai cua Resizeable
-				if (shapes[i] instanceof Resizeable)
-				{
-					((Resizeable) shapes[i]).resize(randomNumber);
-				}
-				
-				System.out.println("Sau khi thay đổi = " + ((Circle) shapes[i]).getArea());
+				showAreaBeforeAndAfter(shapes, i);
 			}
 			
 
 //			}
 		}
+	}
+	
+	private static void showAreaBeforeAndAfter(Shape[] shapes, int i)
+	{
+		System.out.println("Trước khi thay đổi = " + shapes[i].getArea());
+		double randomNumber = Math.floor(Math.random() * 100);
+		System.out.println("Phần trăm thay đổi = " + randomNumber);
+		// kiểm tra hình thứ i trien khai cua Resizeable
+		if (shapes[i] instanceof Resizeable)
+		{
+			((Resizeable) shapes[i]).resize(randomNumber);
+		}
+		System.out.println("Sau khi thay đổi = " + shapes[i].getArea());
 	}
 }
